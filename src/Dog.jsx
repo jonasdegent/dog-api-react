@@ -6,7 +6,6 @@ import {collection, addDoc} from 'firebase/firestore'
 import {firebase} from "./utils/firebase"
 
 const Dog = () => {
-  const [addToFavoriteName, setAddToFavoriteName] = useState("");
   const [data, setData] = useState([]);
   let {name} = useParams();
   const favoritesCollectionRef = collection(firebase, "dog-favorites");
@@ -66,7 +65,7 @@ const fetchDog = () => {
                 <strong>Height: </strong>{dog.height.imperial} cm
               </p>
             </div>
-            <button onClick={addToFavorites} className="add-to" role="button">ADD TO FAVORITES</button>
+            <button onClick={addToFavorites} className="add-to">ADD TO FAVORITES</button>
           </div>
         );
       })}
