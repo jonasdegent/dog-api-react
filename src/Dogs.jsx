@@ -24,7 +24,7 @@ const fetchDogs = () => {
 return (
     <div>
       <div className="header-dogs">
-        <h1 className="header-dogs-title">All the dogs</h1>
+        <h1 className="header-dogs-title">Who let the dogs out!</h1>
         <Link to='/favorites'><button className="link-to-button">FAVORITES</button></Link>
       </div>
       <div className="item-container">
