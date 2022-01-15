@@ -1,0 +1,234 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.header-dogs {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.header-dogs-title {
+  font-size: 3em;
+  font-weight: 700;
+}
+
+.item-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.25em;
+}
+.card {
+  text-align: center;
+  padding: 10px;
+  width: 300px;
+  border-radius: 5px;
+  padding: 1em;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+img {
+  height: 100px;
+  width: auto;
+}
+
+/* DOG DETAILS */
+.dog-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 4em 4em 2.5em 6em;
+  gap: 0.25em;
+}
+.dog-image {
+  width: 350px;
+  height: auto;
+}
+
+.dog-main {
+  margin: 1em;
+}
+
+.dog-wrapper {
+  display: flex;
+}
+/* .dog {
+  text-align: left;
+} */
+
+.dog-item {
+  margin-left: 1em;
+}
+
+.back {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.link-to-button,
+.link-to-button:active,
+.link-to-button:visited,
+.link-to-button:hover,
+.link-to-details,
+.link-to-details:active,
+.link-to-details:visited,
+.link-to-details:hover,
+.link-reset,
+.link-reset:active,
+.link-reset:visited,
+.link-reset:hover {
+  text-decoration: none;
+}
+
+.add-to,
+.link-to-button,
+.remove-button {
+  background-color: #222;
+  border-radius: 4px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  border-style: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.7rem;
+  height: 30px;
+  width: 120px;
+}
+
+.link-to-details {
+  font-weight: 700;
+  font-size: 0.75em;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.add-to:hover,
+.add-to:focus,
+.link-to-button:hover,
+.link-to-button:focus {
+  opacity: 0.75;
+}
+.header-dogs {
+  margin: 1em;
+}
+
+.favorites-wrapper {
+  margin-left: 1em;
+  margin-top: 1em;
+}
+
+.favorite-item {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  margin-bottom: 0.5em;
+}
+
+.favorite-title {
+  margin-right: 1em;
+}
+
+.header-dog {
+  margin-bottom: 1em;
+}
+
+.dog-name {
+  font-weight: 700;
+  font-size: 1.5em;
+}

@@ -1,0 +1,43 @@
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import "./css/styles.css"
+import { Link } from 'react-router-dom';
+
+const Dogs = () => {
+  const [dogs, setDogs] = useState([]);
+  
+  useEffect(() => { 
+    fetchDogs();
+  }, []);
+
+const fetchDogs = () => {
+  axios
+    .get('https://api.thedogapi.com/v1/breeds')
+    .then((res) => {
+      setDogs(res.data);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
+
+return (
+    <div>
+      <div className="header-dogs">
+        <h1 className="header-dogs-title">All the dogs</h1>
+        <Link to='/favorites'><button className="link-to-button">FAVORITES</button></Link>
+      </div>
+      <div className="item-container">
+        {dogs.map((dog) => (
+          <div className="card" key={dog.id}>
+            <Link to={`/dog/${dog.name}`}><img src={dog.image.url} alt='' /></Link>
+            <h3>{dog.name}</h3>
+            <Link className="link-reset" to={`/dog/${dog.name}`}><span className="link-to-details">DETAILS</span></Link>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Dogs;
