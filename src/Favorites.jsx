@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, {useState, useEffect} from 'react'
 import {firebase} from "./utils/firebase"
 import {collection,getDocs,deleteDoc,doc} from "firebase/firestore"
@@ -28,7 +29,7 @@ const Favorites = () => {
           return (
             <div className="favorite-item">
               <p className="favorite-title">Favorite: {favorite.name}</p>
-              <button onClick={() => {deleteFavorite(favorite.id)}} className="remove-button" role="button">REMOVE</button>
+              <button onClick={() => {deleteFavorite(favorite.id)}} className="remove-button">REMOVE</button>
             </div>
           )
         })}

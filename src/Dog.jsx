@@ -15,10 +15,7 @@ const Dog = () => {
   }
 
 useEffect(() => {
-    fetchDog();
-}, []);
-
-const fetchDog = () => {
+  const fetchDog = () => {
     axios
       .get(
         `https://api.thedogapi.com/v1/breeds/search?q=${name}`
@@ -27,7 +24,11 @@ const fetchDog = () => {
         setData(res.data);
       })
       .catch((err) => console.log(err));
-  };
+  };  
+  fetchDog();
+}, [name]);
+
+
 
   return (
     <div className="dog-main">
