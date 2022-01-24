@@ -1,4 +1,3 @@
-import {firebase} from "./utils/firebase"
 import "./css/styles.css"
 import Dogs from "./Dogs"
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
