@@ -43,7 +43,7 @@ useEffect(() => {
         return (
           <div className="dog-wrapper" key={dog.id}>
             <div>
-              <img className='dog-image' src={`https://cdn2.thedogapi.com/images/${dog.reference_image_id}.jpg`} alt='' />
+              <img className='dog-image' src={`https://cdn2.thedogapi.com/images/${dog.reference_image_id}.jpg`} alt={`a dog named ${dog.name}`} />
             </div>
             <div className="dog-item">
               <span className='dog-name'>{dog.name} </span>
