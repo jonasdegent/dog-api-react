@@ -49,19 +49,6 @@ return (
             <Link className="link-reset" to={`/dog/${dog.name}`}><span className="link-to-details">DETAILS</span></Link>
           </div>
         ))}
-        {/* {dogs.filter((dog) => {
-          if (searchDog ==="") {
-            return dog
-          } else if (dog.name.toLowerCase().includes(searchDog.toLowerCase())) {
-            return dog
-          }
-        }).map((dog) => (
-          <div className="card" key={dog.id}>
-            <Link to={`/dog/${dog.name}`}><img src={dog.image.url} alt={`a dog named ${dog.name}`} /></Link>
-            <h3>{dog.name}</h3>
-            <Link className="link-reset" to={`/dog/${dog.name}`}><span className="link-to-details">DETAILS</span></Link>
-          </div>
-        ))} */}
       </div>
     </div>
   );
