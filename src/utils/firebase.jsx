@@ -5,8 +5,8 @@ import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-  databaseURL: process.env.REACT_APP_FIREBASE_DATABASE_URL,
-  projectId: "dog-api-syntra"
+  // databaseURL: process.env.REACT_APP_FIREBASE_DATABASE_URL,
+  projectId: "dog-api-react-fixed"
 };
 
 const app = initializeApp(firebaseConfig);
