@@ -29,7 +29,7 @@ const Favorites = () => {
       <div className="favorites">
         {favorites.map((favorite) => {
           return (
-            <div className="favorite-item">
+            <div className="favorite-item" key={favorite.id}>
               <p className="favorite-title">Favorite: {favorite.name}</p>
               <button onClick={() => {deleteFavorite(favorite.id)}} className="remove-button">REMOVE</button>
             </div>
