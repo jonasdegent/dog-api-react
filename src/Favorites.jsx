@@ -9,18 +9,20 @@ const Favorites = () => {
   const [favorites, setFavorites] = useState([]);
   const favoritesCollectionRef = collection(firebase, "dog-favorites");
 
+  const getFavorites = async () => {
+    const data = await getDocs(favoritesCollectionRef);
+    setFavorites(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
+  }
+
   const deleteFavorite = async (id) => {
     const favoriteDoc = doc(firebase, "dog-favorites", id);
     await deleteDoc(favoriteDoc)
+    await getFavorites();
   }
 
-  useEffect (() => {
-    const getFavorites = async () => {
-      const data = await getDocs(favoritesCollectionRef);
-      setFavorites(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
-    }
+  useEffect (() => { 
     getFavorites();
-  },[deleteFavorite])
+  },[])
 
   return (
     <div className="favorites-wrapper">

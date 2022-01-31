@@ -28,8 +28,6 @@ useEffect(() => {
   fetchDog();
 }, [name]);
 
-
-
   return (
     <div className="dog-main">
       <div className="header-dog">
